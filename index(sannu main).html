@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SANNU MD BOT- Free WhatsApp Mini Bot Service. Professional bot solutions for WhatsApp automation and messaging." />
+  <meta name="keywords" content="WhatsApp bot, mini bot service, SANNU MD🥷, automation, messaging" />
+  <meta name="theme-color" content="#00000" />
+  <title>SANNU MD BOT — FREE WHATSAPP BOT SERVICE</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    :root {
+      --bg: #000000;
+      --bg-subtle: #000000;වෙනස් කරන්න එපා
+      --panel: #FF2727;
+      --panel-hover: #000000; වෙනස් කරන්න එපා
+      --panel-2: #FF2727;
+      --text: #FF2727; රතු පට 
+      --text-muted: #FF2727;
+      --text-subtle: #FF2727;
+      --brand: #FF2727;
+      --brand-hover: #FF2727;
+      --brand-light: #FF2727;අකුරූ උඩ 
+      --accent: #FF2727;
+      --success: #FF2727;
+      --warning: #FF2727;
+      --border: rgba(250, 249, 246, 0.15);
+      --border-hover: rgba(250, 249, 246, 0.25);
+      --shadow-sm: 0 1px 2px 0 rgba(250, 249, 246, 0.05);
+      --shadow: 0 4px 6px -1px rgba(250, 249, 246, 0.1), 0 2px 4px -1px rgba(250, 249, 246, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(250, 249, 246, 0.15), 0 4px 6px -2px rgba(250, 249, 246, 0.08);
+      --shadow-xl: 0 20px 25px -5px rgba(250, 249, 246, 0.2), 0 10px 10px -5px rgba(250, 249, 246, 0.1);
+      --gradient-brand: linear-gradient(135deg, var(--brand) 0%, var(--brand-hover) 100%);
+      --gradient-text: linear-gradient(135deg, var(--text) 0%, var(--brand-light) 100%);
+      --backdrop-blur: saturate(180%) blur(20px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(250, 249, 246, 0.15), transparent),
+        radial-gradient(ellipse 60% 80% at 80% 120%, rgba(250, 249, 246, 0.1), transparent),
+        var(--bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-feature-settings: 'kern' 1, 'liga' 1;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Enhanced Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: var(--backdrop-blur);
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav.scrolled {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.98) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+      );
+      border-bottom-color: var(--border-hover);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: padding 0.3s ease;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: translateY(-1px);
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+        0 8px 32px rgba(250, 249, 246, 0.3),
+        0 0 0 3px var(--brand);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 2px;
+    }
+
+    .brand-logo::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      background: conic-gradient(from 0deg, var(--brand), var(--brand-hover), var(--brand));
+      border-radius: 50%;
+      z-index: -1;
+      animation: rotate 3s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .brand:hover .brand-logo::before {
+      opacity: 1;
+    }
+
+    .brand:hover .brand-logo {
+      transform: scale(1.05);
+      box-shadow: 
+        0 12px 48px rgba(250, 249, 246, 0.4),
+        0 0 0 3px var(--brand-hover);
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+    }
+
+    .brand-title {
+      font-family: "Orbitron", sans-serif;
+      font-weight: 800;
+      font-size: 1.125rem;
+      letter-spacing: 0.5px;
+      background: var(--gradient-text);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Mobile Menu */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger:hover {
+      background: var(--panel-hover);
+      color: var(--brand);
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: var(--panel);
+      border-left: 1px solid var(--border);
+      backdrop-filter: var(--backdrop-blur);
+      transition: right 0.3s ease;
+      z-index: 1001;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .sidebar.open {
+      right: 0;
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(250, 249, 246, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .sidebar-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-close:hover {
+      background: var(--panel-hover);
+      color: var(--brand);
+    }
+
+    .sidebar a {
+      padding: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sidebar a:hover {
+      background: var(--panel-hover);
+      color: var(--text);
+      transform: translateX(4px);
+    }
+
+    /* Navigation Menu */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--text);
+      background: rgba(250, 249, 246, 0.05);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-brand);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Enhanced Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      background: none;
+    }
+
+    .btn-primary {
+      background: var(--gradient-brand);
+      color: var(--bg);
+      box-shadow: 
+        0 4px 12px rgba(250, 249, 246, 0.3),
+        0 0 0 1px var(--border);
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 16px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 
+        0 8px 24px rgba(250, 249, 246, 0.4),
+        0 0 0 1px var(--border-hover);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn-secondary {
+      background: var(--panel);
+      color: var(--text);
+      border-color: var(--border);
+      backdrop-filter: var(--backdrop-blur);
+    }
+
+    .btn-secondary:hover {
+      background: var(--panel-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-ghost {
+      background: rgba(250, 249, 246, 0.05);
+      color: var(--text-muted);
+      border-color: var(--border);
+      backdrop-filter: var(--backdrop-blur);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(250, 249, 246, 0.1);
+      color: var(--text);
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Audio Toggle Button */
+    #audioToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1002;
+      background: var(--panel);
+      border: 2px solid var(--border);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-xl);
+      backdrop-filter: var(--backdrop-blur);
+      transition: all 0.3s ease;
+      color: var(--text);
+    }
+
+    #audioToggle:hover {
+      background: var(--panel-hover);
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      box-shadow: 
+        0 20px 40px rgba(250, 249, 246, 0.2),
+        0 0 20px rgba(250, 249, 246, 0.1);
+    }
+
+    #audioToggle i {
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    #audioToggle:hover i {
+      transform: scale(1.1);
+    }
+
+    #audioToggle.playing {
+      background: var(--gradient-brand);
+      color: var(--bg);
+      border-color: var(--brand);
+    }
+
+    #audioToggle.playing:hover {
+      background: var(--brand-hover);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 8rem 1.5rem 4rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+      min-height: 60vh;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(250, 249, 246, 0.1);
+      border: 1px solid rgba(250, 249, 246, 0.3);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--brand-light);
+      width: fit-content;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      background: var(--gradient-text);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 
+        0 25px 50px -12px rgba(250, 249, 246, 0.25),
+        0 0 0 1px var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .hero-image:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 35px 70px -12px rgba(250, 249, 246, 0.35),
+        0 0 0 1px var(--border-hover);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(250, 249, 246, 0.1));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .hero-image:hover::before {
+      opacity: 1;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      background: var(--gradient-text);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Features Section */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-brand);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      background: var(--panel-hover);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: var(--gradient-brand);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--bg);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Team Grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .member-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.5rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .member-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-brand);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .member-card:hover {
+      transform: translateY(-4px);
+      background: var(--panel-hover);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .member-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .member-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .member-avatar::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: var(--gradient-brand);
+      border-radius: 22px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .member-card:hover .member-avatar::before {
+      opacity: 1;
+    }
+
+    .member-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover .member-avatar img {
+      transform: scale(1.1);
+    }
+
+    .member-details h3 {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .member-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--gradient-brand);
+      color: var(--bg);
+      font-family: "Orbitron", monospace;
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .member-role {
+      color: var(--text-subtle);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      color: var(--text-subtle);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    /* Notification Styles */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: var(--shadow-xl);
+      backdrop-filter: var(--backdrop-blur);
+      z-index: 1002;
+      transform: translateX(400px);
+      transition: transform 0.3s ease;
+      max-width: 300px;
+    }
+
+    .notification.show {
+      transform: translateX(0);
+    }
+
+    .notification.success {
+      border-color: var(--success);
+      background: rgba(250, 249, 246, 0.1);
+    }
+
+    .notification.error {
+      border-color: var(--brand);
+      background: rgba(250, 249, 246, 0.1);
+    }
+
+    /* Animations */
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    /* Loading States */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+      position: relative;
+    }
+
+    .loading::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(250, 249, 246, 0.1), transparent);
+      animation: shimmer 1.5s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .nav-inner {
+        padding: 0.75rem 1rem;
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero {
+        padding: 6rem 1rem 3rem;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .btn-primary {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .member-card {
+        padding: 1.25rem;
+      }
+
+      .section {
+        padding: 3rem 1rem;
+      }
+      
+      #audioToggle {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-text {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .member-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .member-avatar {
+        width: 100px;
+        height: 100px;
+      }
+      
+      #audioToggle {
+        bottom: 15px;
+        right: 15px;
+        padding: 0.6rem 1rem;
+      }
+      
+      #audioToggle span {
+        display: none;
+      }
+    }
+
+    /* Utility Classes */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .focus-visible:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand focus-visible" href="#home" aria-label="SANNU MD MINI - Home">
+        <div class="brand-text">
+          <div class="brand-title">SANNU MD MINI</div>
+          <div class="brand-subtitle">𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐁𝐎𝐓 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋</div>
+        </div>
+        <div class="brand-logo" aria-hidden="true">
+          <img src="රවුම් ලොගො එක" alt="SANNU MD MINI" />
+        </div>
+        𝚂𝙰𝙽𝙽𝚄 𝙼𝙳 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃
+      </a>
+      <button class="hamburger" onclick="toggleSidebar()" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-menu">
+        <a href="#home" class="nav-link focus-visible active">Home</a>
+        <a href="#features" class="nav-link focus-visible">Features</a>
+        <a href="#team" class="nav-link focus-visible">Team</a>
+        <a href="#contact" class="nav-link focus-visible">Contact</a>
+  </nav>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+  <div class="sidebar" id="sidebar">
+    <button class="sidebar-close" onclick="closeSidebar()" aria-label="Close menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="#home" onclick="closeSidebar()">
+      <i class="fas fa-home"></i>
+      Home
+    </a>
+    <a href="#features" onclick="closeSidebar()">
+      <i class="fas fa-star"></i>
+      menu types
+    </a>
+    <a href="#team" onclick="closeSidebar()">
+      <i class="fas fa-users"></i>
+      Team
+    </a>
+    <a href="#contact" onclick="closeSidebar()">
+      <i class="fas fa-envelope"></i>
+      Contact
+    </a>
+  </div>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-kicker fade-in-up" style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+           𝐒𝐀𝐍𝐍𝐔 𝐌𝐃 𝐁𝐎𝐓
+        <div class="hero-visual fade-in-up">
+          </div>
+            <a href="https://acdmdlite-botcount-9bb254830e77.herokuapp.com/" target="_blank" class="btn btn-primary" style="margin-left: 1rem; font-size: 0.5rem; padding: 0.25rem 0.75rem;">
+              𝐂𝐎𝐍𝐓𝐒
+            </a>
+          </div>
+          <h1 id="hero-title" class="hero-title fade-in-up">
+            𝐒𝐀𝐍𝐍𝐔 𝐌𝐃 𝐁𝐎𝐓 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋
+          </h1>
+             <div class="hero-actions fade-in-up">
+            <button class="btn btn-primary focus-visible" id="pairBtn1" aria-describedby="pair-desc">
+              <i class="fas fa-link" aria-hidden="true"></i>
+               𝐁𝐎𝐓 𝐏𝐀𝐈𝐑 1🥷
+            </button>
+            <button class="btn btn-primary focus-visible" id="pairBtn2" aria-describedby="pair-desc">
+              <i class="fas fa-link" aria-hidden="true"></i>
+              𝐁𝐎𝐓 𝐏𝐀𝐈𝐑 2🥷
+            </button>
+            <div id="pair-desc" class="sr-only">Connect to our WhatsApp bot service</div>
+          </div>
+        <div class="hero-visual fade-in-up">
+          <div class="hero-image">
+            <img src="කොටි ලොගො එක" alt="ACD MD Bot Interface Preview" loading="eager" width="781" height="363" />
+          </div>  
+        </div>
+        <div class="hero-visual fade-in-up">
+          <div class="hero-image">
+            <img src="කොටි ලොගො එක" alt="ACD MD Bot Interface Preview" loading="eager" width="500" height="300" />
+          </div>
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="section-header">
+        <h2 id="features-title" class="section-title">Powerful Features</h2>
+        <p class="section-description">
+          Discover what makes our WhatsApp bot service stand out from the rest
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-lightning-bolt"></i>
+          </div>
+          <h3>Lightning Fast</h3>
+          <p>Experience instant responses and rapid command execution with our optimized bot infrastructure.</p>
+        </div>
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Secure & Reliable</h3>
+          <p>Your data is protected with enterprise-grade security and 99.9% uptime guarantee.</p>
+        </div>
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Easy Setup</h3>
+          <p>Get started in minutes with our simple pairing process. No technical knowledge required.</p>
+        </div>
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Our dedicated team is always available to help you with any questions or issues.</p>
+        </div>
+        
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-download"></i>
+          </div>
+          <h3>Media Downloads</h3>
+          <p>Download videos, music, and images directly through WhatsApp commands.</p>
+        </div>
+        
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Group Management</h3>
+          <p>Advanced group moderation tools to keep your WhatsApp groups organized and active.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="section-header">
+        <h2 id="team-title" class="section-title">Meet Our Expert Team</h2>
+        <p class="section-description">
+          Passionate developers dedicated to creating exceptional WhatsApp bot experiences
+        </p>
+      </div>
+      
+      <div class="team-grid">
+        <article class="member-card fade-in-up">
+          <div class="member-info">
+            <div class="member-avatar">
+              <img src="https://files.catbox.moe/j958pu.jpg" alt="ASHU - Lead Developer" loading="lazy" width="80" height="80" />
+            </div>
+            <div class="member-details">
+              <h3>
+                ASHU
+                <span class="member-badge" aria-label="Team member A">A</span>
+              </h3>
+              <p class="member-role">Lead Developer & Architect</p>
+            </div>
+          </div>
+        </article>
+        
+        <article class="member-card fade-in-up">
+          <div class="member-info">
+            <div class="member-avatar">
+              <img src="https://files.catbox.moe/8ox1n8.jpg" alt="CHUTTA - Design & Development Specialist" loading="lazy" width="80" height="80" />
+            </div>
+            <div class="member-details">
+              <h3>
+                CHUTTA
+                <span class="member-badge" aria-label="Team member C">C</span>
+              </h3>
+              <p class="member-role">Design & Development Specialist</p>
+            </div>
+          </div>
+        </article>
+        
+        <article class="member-card fade-in-up">
+          <div class="member-info">
+            <div class="member-avatar">
+              <img src="https://files.catbox.moe/kf47vr.jpg" alt="DINA - UI/UX Designer & Developer" loading="lazy" width="80" height="80" />
+            </div>
+            <div class="member-details">
+              <h3>
+                DINA
+                <span class="member-badge" aria-label="Team member D">D</span>
+              </h3>
+              <p class="member-role">UI/UX Designer & Developer</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="section-header">
+        <h2 id="contact-title" class="section-title">Get Connected</h2>
+        <p class="section-description">
+          Ready to enhance your WhatsApp experience? Reach out through any of these channels
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <a href="https://whatsapp.com/channel/0029VbAb56wFcow9VF8VdX3S" class="btn btn-ghost focus-visible" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          WhatsApp
+        </a>
+        <a href="https://t.me/+7uGw70Nb98xjNzc1" class="btn btn-ghost focus-visible" target="_blank" rel="noopener noreferrer" aria-label="Join our Telegram channel">
+          <i class="fab fa-telegram" aria-hidden="true"></i>
+          Telegram
+        </a>
+        <a href="https://youtube.com/@darktechzone?si=HkSclx6CfPoP-7EY" class="btn btn-ghost focus-visible" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+          YouTube
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 ACD MD Team. All rights reserved.</p>
+      <p>Providing free WhatsApp bot services with passion and dedication.</p>
+    </div>
+  </footer>
+
+  <div class="notification" id="notification">
+    <div id="notificationText"></div>
+  </div>
+  
+  <audio id="backgroundAudio" autoplay></audio>
+  <button id="audioToggle" class="btn focus-visible">
+    <i class="fas fa-music"></i>
+    <span id="audioText">Music Playing</span>
+  </button>
+
+  <script>
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile sidebar functionality
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+
+    function closeSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Active navigation link highlighting
+    function updateActiveNavLink() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNavLink);
+
+    // Notification system
+    function showNotification(message, type = 'success') {
+      const notification = document.getElementById('notification');
+      const notificationText = document.getElementById('notificationText');
+      
+      notificationText.textContent = message;
+      notification.className = `notification ${type}`;
+      notification.classList.add('show');
+      
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 3000);
+    }
+
+    // Bot pairing functionality
+    document.getElementById('pairBtn1').addEventListener('click', function() {
+      this.classList.add('loading');
+      this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting...';
+      
+      setTimeout(() => {
+        window.open('https://acdmdlite-app-001-ac98bd5dc61d.herokuapp.com/', '_blank');
+        this.classList.remove('loading');
+        this.innerHTML = '<i class="fas fa-link"></i> Bot Pair #1';
+        showNotification('Bot #1 pairing initiated! Check the new tab.');
+      }, 1500);
+    });
+
+    document.getElementById('pairBtn2').addEventListener('click', function() {
+      this.classList.add('loading');
+      this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting...';
+      
+      setTimeout(() => {
+        window.open('https://acdmdlite-app-001-ac98bd5dc61d.herokuapp.com/', '_blank');
+        this.classList.remove('loading');
+        this.innerHTML = '<i class="fas fa-link"></i> Bot Pair #2';
+        showNotification('Bot #2 pairing initiated! Check the new tab.');
+      }, 1500);
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSidebar();
+      }
+    });
+
+    // Preload critical images
+    const criticalImages = [
+      'https://files.catbox.moe/gugd2d.jpg',
+      'https://files.catbox.moe/j958pu.jpg',
+      'https://files.catbox.moe/8ox1n8.jpg',
+      'https://files.catbox.moe/kf47vr.jpg',
+      'https://files.catbox.moe/2rc6f8.jpeg'
+    ];
+
+    criticalImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    // Initialize animations on page load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.fade-in-up').forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = '1';
+        }, index * 100);
+      });
+    });
+
+    // Audio functionality
+    const audio = document.getElementById('backgroundAudio');
+    const toggleBtn = document.getElementById('audioToggle');
+    const audioText = document.getElementById('audioText');
+    const playlist = [
+      'https://files.catbox.moe/7ipebf.mp3',
+      'https://files.catbox.moe/th93cw.mp3'
+    ];
+    let currentTrack = 0;
+
+    function playNext() {
+      currentTrack = (currentTrack + 1) % playlist.length;
+      audio.src = playlist[currentTrack];
+      audio.play();
+    }
+
+    audio.addEventListener('ended', playNext);
+
+    toggleBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().then(() => {
+          toggleBtn.classList.add('playing');
+          toggleBtn.querySelector('i').className = 'fas fa-music';
+          audioText.textContent = 'Music Playing';
+        }).catch(() => {});
+      } else {
+        audio.pause();
+        toggleBtn.classList.remove('playing');
+        toggleBtn.querySelector('i').className = 'fas fa-volume-mute';
+        audioText.textContent = 'Music Paused';
+      }
+    });
+
+    // Initial play
+    audio.src = playlist[0];
+    audio.play().then(() => {
+      toggleBtn.classList.add('playing');
+      toggleBtn.querySelector('i').className = 'fas fa-music';
+      audioText.textContent = 'Music Playing';
+    }).catch(() => {
+      toggleBtn.classList.remove('playing');
+      toggleBtn.querySelector('i').className = 'fas fa-volume-mute';
+      audioText.textContent = 'Music Paused';
+    });
+  </script>
+</body>
+</html>
+© 2025 POWERED BY ASHIYA-MD 🥷🇱🇰"
