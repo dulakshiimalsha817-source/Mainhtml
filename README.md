@@ -14,25 +14,11 @@
 
 ---
 
-# 🔧 **sᴇᴛ ᴜᴘ ❣️**
-
-## ⭐ **1. 𝗙𝗢𝗥𝗞 𝗧𝗛𝗘 𝗕𝗢𝗧**
-
-[![Fork the Repository](https://img.shields.io/badge/FORK%20REPOSITORY-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)](ලින්ක් එක දන්න ඔනේ😐)
-
----
-
-## 🔑 **2. 𝗚𝗘𝗧 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗**
-
-[![Generate Session](https://img.shields.io/badge/GENERATE%20SESSION-9700FF?style=for-the-badge&logo=link&logoColor=white)](NO PAIR SITE)
-
----
-
 ## 🚀 **3. 𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧✅**
 
 ### **Heroku**
 
-[![Deploy to Heroku](https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template= දන්න ඔනෙ)
+[![Deploy to Heroku](https://img.shields.io/badge/DEPLOY%20TO%20HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/dulakshiimalsha817-source/Mainhtml.git)
 
 ### **Render**
 
@@ -67,7 +53,7 @@
 
 ## 📦 **Repository**
 
-[![GitHub Repository](https://img.shields.io/badge/VIEW%20REPOSITORY-100000?style=for-the-badge&logo=github&logoColor=white)](රිපො දන්න ඔනේ)
+[![GitHub Repository](https://img.shields.io/badge/VIEW%20REPOSITORY-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dulakshiimalsha817-source/Mainhtml.git)
 
 ---
 
