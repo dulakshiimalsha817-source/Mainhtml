@@ -10,7 +10,7 @@
 
 ---
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Poppins&size=40&duration=3000&color=00FFFF&center=true&vCenter=true&weight=700&lines=POPKID%20MD|BOT)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Poppins&size=40&duration=3000&color=00FFFF&center=true&vCenter=true&weight=700&lines=SANNU%20MD|BOT)
 
 ---
 
@@ -36,7 +36,7 @@
 
 # 🎯 **Project Overview**
 
-> **POPKID-MD** is a high-speed, feature-rich WhatsApp bot designed for performance, stability, and ease of use. Developed with passion by **popkid**.
+> **SANNU-MD** is a high-speed, feature-rich WhatsApp bot designed for performance, stability, and ease of use. Developed with passion by **SANNUXD**.
 
 ---
 
